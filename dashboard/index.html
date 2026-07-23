@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>CENTINELA-X</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>CENTINELA-X</h1>
+
+<div id="estado">
+
+🟢 Sistema Activo
+
+</div>
+
+</header>
+
+<div class="contenedor">
+
+<div class="video">
+
+<h2>Video en vivo</h2>
+
+<img src="http://127.0.0.1:8000/video_feed">
+
+</div>
+
+<div class="panel">
+
+<h2>Última alerta</h2>
+
+<div id="ultima">
+
+Esperando eventos...
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Total Alertas</h3>
+
+<h1 id="total">0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Armas Detectadas</h3>
+
+<h1 id="armas">0</h1>
+
+</div>
+
+</div>
+
+<h2>Historial</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fecha</th>
+
+<th>Objeto</th>
+
+<th>Confianza</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabla">
+
+</tbody>
+
+</table>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
