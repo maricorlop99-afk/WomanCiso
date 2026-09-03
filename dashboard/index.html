@@ -3,97 +3,2955 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<title>CENTINELA-X</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="CENTINELA-X - Soluciones inteligentes de videovigilancia impulsadas por Inteligencia Artificial."
+    >
+
+    <title>CENTINELA-X | Seguridad Inteligente</title>
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="img/CentinelaLogo.png"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="web-style.css"
+    >
 
 </head>
 
+
 <body>
 
-<header>
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
 
-<h1>CENTINELA-X</h1>
+    <header class="main-header">
 
-<div id="estado">
+        <div class="header-container">
 
-🟢 Sistema Activo
+            <!-- LOGO -->
 
-</div>
+            <a href="index.html" class="logo-container">
 
-</header>
+                <img
+                    src="img/CentinelaLogo.png"
+                    alt="CENTINELA-X"
+                    class="logo"
+                >
 
-<div class="contenedor">
+                <span class="logo-text">
+                    CENTINELA-X
+                </span>
 
-<div class="video">
+            </a>
 
-<h2>Video en vivo</h2>
 
-<img src="http://127.0.0.1:8000/video_feed">
+            <!-- MENU -->
 
-</div>
+            <nav class="main-nav">
 
-<div class="panel">
 
-<h2>Última alerta</h2>
+    <!-- =================================================
+         SOLUCIONES
+    ================================================== -->
 
-<div id="ultima">
+    <div class="nav-dropdown">
 
-Esperando eventos...
+        <button class="nav-dropdown-button">
 
-</div>
+            Soluciones
 
-</div>
+            <i class="fa-solid fa-chevron-down"></i>
 
-</div>
+        </button>
 
-<div class="cards">
 
-<div class="card">
+        <div class="nav-dropdown-menu">
 
-<h3>Total Alertas</h3>
+            <a href="#soluciones">
+                <i class="fa-solid fa-house"></i>
+                <span>
+                    Hogar
+                    <small>Espacios personales</small>
+                </span>
+            </a>
 
-<h1 id="total">0</h1>
 
-</div>
+            <a href="#soluciones">
+                <i class="fa-solid fa-store"></i>
+                <span>
+                    Local
+                    <small>Establecimientos</small>
+                </span>
+            </a>
 
-<div class="card">
 
-<h3>Armas Detectadas</h3>
+            <a href="#soluciones">
+                <i class="fa-solid fa-building"></i>
+                <span>
+                    Empresa
+                    <small>Organizaciones</small>
+                </span>
+            </a>
 
-<h1 id="armas">0</h1>
+        </div>
 
-</div>
+    </div>
 
-</div>
 
-<h2>Historial</h2>
 
-<table>
+    <!-- =================================================
+         PRODUCTOS
+    ================================================== -->
 
-<thead>
+    <div class="nav-dropdown">
 
-<tr>
+        <button class="nav-dropdown-button">
 
-<th>Fecha</th>
+            Productos
 
-<th>Objeto</th>
+            <i class="fa-solid fa-chevron-down"></i>
 
-<th>Confianza</th>
+        </button>
 
-</tr>
 
-</thead>
+        <div class="nav-dropdown-menu">
 
-<tbody id="tabla">
+            <a href="#productos">
 
-</tbody>
+                <i class="fa-solid fa-video"></i>
 
-</table>
+                <span>
+                    Análisis de video
+                    <small>Procesamiento de video</small>
+                </span>
 
-<script src="script.js"></script>
+            </a>
+
+
+            <a href="#productos">
+
+                <i class="fa-solid fa-crosshairs"></i>
+
+                <span>
+                    Detección mediante IA
+                    <small>Detección de objetos</small>
+                </span>
+
+            </a>
+
+
+            <a href="#evidencia">
+
+                <i class="fa-solid fa-file-video"></i>
+
+                <span>
+                    Evidencia de eventos
+                    <small>Registro y conservación</small>
+                </span>
+
+            </a>
+
+
+            <a href="#productos">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>
+                    Sistema de alertas
+                    <small>Eventos detectados</small>
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SERVICIOS
+    ================================================== -->
+
+    <div class="nav-dropdown">
+
+        <button class="nav-dropdown-button">
+
+            Servicios
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+
+        <div class="nav-dropdown-menu">
+
+            <a href="#soluciones">
+
+                <i class="fa-solid fa-video"></i>
+
+                <span>
+                    Análisis de video
+                    <small>Monitoreo mediante video</small>
+                </span>
+
+            </a>
+
+
+            <a href="#como-funciona">
+
+                <i class="fa-solid fa-crosshairs"></i>
+
+                <span>
+                    Detección y seguimiento
+                    <small>IA y visión computacional</small>
+                </span>
+
+            </a>
+
+
+            <a href="#evidencia">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span>
+                    Registro de evidencia
+                    <small>Información de eventos</small>
+                </span>
+
+            </a>
+
+
+            <a href="#proximamente">
+
+                <i class="fa-solid fa-code-branch"></i>
+
+                <span>
+                    Evolución de la plataforma
+                    <small>Nuevas capacidades</small>
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         RECURSOS
+    ================================================== -->
+
+    <div class="nav-dropdown">
+
+        <button class="nav-dropdown-button">
+
+            Recursos
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+
+        <div class="nav-dropdown-menu">
+
+            <a href="#conocenos">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>
+                    Conoce CENTINELA-X
+                    <small>El proyecto</small>
+                </span>
+
+            </a>
+
+
+            <a href="#como-funciona">
+
+                <i class="fa-solid fa-diagram-project"></i>
+
+                <span>
+                    Flujo del sistema
+                    <small>Cómo funciona</small>
+                </span>
+
+            </a>
+
+
+            <a href="#tecnologia">
+
+                <i class="fa-solid fa-microchip"></i>
+
+                <span>
+                    Stack tecnológico
+                    <small>Tecnologías utilizadas</small>
+                </span>
+
+            </a>
+
+
+            <a href="#proximamente">
+
+                <i class="fa-solid fa-code-branch"></i>
+
+                <span>
+                    Roadmap
+                    <small>Evolución del proyecto</small>
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CONÓCENOS
+    ================================================== -->
+
+    <a
+        href="#conocenos"
+        class="nav-direct-link"
+    >
+
+        Conócenos
+
+    </a>
+
+
+
+    <!-- =================================================
+         DASHBOARD
+    ================================================== -->
+
+    <a
+        href="index-dashboard.html"
+        class="nav-dashboard"
+    >
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        Dashboard
+
+    </a>
+
+
+</nav>
+
+
+            <!-- INICIAR SESIÓN-->
+
+<a href="login.html" class="btn-contacto">
+    Iniciar sesión
+</a>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+HERO
+    =================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-container">
+
+
+                <!-- TEXTO -->
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        SEGURIDAD INTELIGENTE
+
+                    </span>
+
+
+                    <h1>
+
+                        CENTINELA-X
+
+                        <span>
+                            Seguridad que observa.
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Plataforma de videovigilancia impulsada por
+                        Inteligencia Artificial para detectar eventos
+                        de riesgo, generar alertas y facilitar una
+                        respuesta oportuna.
+
+                    </p>
+
+
+                    <div class="hero-features">
+
+                        <span>
+                            <i class="fa-solid fa-eye"></i>
+                            Detecta
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-brain"></i>
+                            Analiza
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-bell"></i>
+                            Alerta
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Protege
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#soluciones"
+                            class="btn-primary"
+                        >
+
+                            Conocer soluciones
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="index-dashboard.html"
+                            class="btn-secondary"
+                        >
+
+                            Ir al Dashboard
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VISUAL -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-header">
+
+                            <span>
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                SISTEMA ACTIVO
+
+                            </span>
+
+                            <span>
+                                CENTINELA-X AI
+                            </span>
+
+                        </div>
+
+
+                        <div class="hero-camera">
+
+                            <div class="camera-overlay">
+
+                                <span>
+                                    <i class="fa-solid fa-video"></i>
+                                    VIDEO EN VIVO
+                                </span>
+
+                                <span>
+                                    IA ONLINE
+                                </span>
+
+                            </div>
+
+                            <div class="camera-center">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                                <p>
+                                    MONITOREO INTELIGENTE
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-alert">
+
+                            <div class="alert-icon">
+
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Sistema de detección
+                                </strong>
+
+                                <span>
+                                    Análisis de video activo
+                                </span>
+
+                            </div>
+
+                            <span class="online-dot"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+     QUE ES CENTINELA-X
+===================================================== -->
+
+<section class="about-section" id="conocenos">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                SEGURIDAD INTELIGENTE
+            </span>
+
+            <h2>
+                ¿Qué es <span>CENTINELA-X</span>?
+            </h2>
+
+            <p>
+                CENTINELA-X es una plataforma de videovigilancia
+                apoyada por Inteligencia Artificial que analiza
+                imágenes de video para identificar eventos de interés,
+                generar alertas y conservar evidencia.
+            </p>
+
+        </div>
+
+
+        <div class="security-flow">
+
+            <!-- VIDEO -->
+
+            <div class="security-card">
+
+                <div class="security-icon">
+
+                    <i class="fa-solid fa-video"></i>
+
+                </div>
+
+                <span class="card-number">01</span>
+
+                <h3>Video</h3>
+
+                <p>
+                    Utiliza una fuente de video para realizar
+                    el monitoreo del espacio.
+                </p>
+
+            </div>
+
+
+            <!-- IA -->
+
+            <div class="security-card">
+
+                <div class="security-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <span class="card-number">02</span>
+
+                <h3>Inteligencia Artificial</h3>
+
+                <p>
+                    El sistema analiza los frames del video
+                    mediante modelos de detección basados en IA.
+                </p>
+
+            </div>
+
+
+            <!-- DETECCION -->
+
+            <div class="security-card">
+
+                <div class="security-icon">
+
+                    <i class="fa-solid fa-crosshairs"></i>
+
+                </div>
+
+                <span class="card-number">03</span>
+
+                <h3>Detección</h3>
+
+                <p>
+                    Identifica objetos configurados para su
+                    detección y evalúa el nivel de confianza.
+                </p>
+
+            </div>
+
+
+            <!-- ALERTAS -->
+
+            <div class="security-card">
+
+                <div class="security-icon">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </div>
+
+                <span class="card-number">04</span>
+
+                <h3>Alertas y evidencia</h3>
+
+                <p>
+                    Cuando se detecta un evento, se registra,
+                    se conserva evidencia y puede generarse
+                    una alerta.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     SOLUCIONES
+===================================================== -->
+
+<section class="solutions-section" id="soluciones">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                SOLUCIONES DE SEGURIDAD
+            </span>
+
+            <h2>
+                Seguridad adaptada a
+                <span>cada entorno</span>
+            </h2>
+
+            <p>
+                CENTINELA-X puede aplicarse a diferentes escenarios
+                donde el análisis de video y la detección mediante
+                Inteligencia Artificial aportan una capa adicional
+                de monitoreo y generación de evidencia.
+            </p>
+
+        </div>
+
+
+        <div class="solutions-grid">
+
+            <!-- HOGAR -->
+
+            <article class="solution-card">
+
+                <div class="solution-image home-image">
+
+                    <div class="solution-overlay"></div>
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+                <div class="solution-content">
+
+                    <span class="solution-label">
+                        HOGAR
+                    </span>
+
+                    <h3>
+                        Protección para espacios personales
+                    </h3>
+
+                    <p>
+                        Monitoreo mediante video para identificar
+                        situaciones de interés dentro del entorno
+                        vigilado y conservar evidencia.
+                    </p>
+
+                    <div class="solution-feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Análisis de video
+                        </span>
+
+                    </div>
+
+                    <div class="solution-feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Detección mediante IA
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- LOCAL -->
+
+            <article class="solution-card">
+
+                <div class="solution-image business-image">
+
+                    <div class="solution-overlay"></div>
+
+                    <i class="fa-solid fa-store"></i>
+
+                </div>
+
+                <div class="solution-content">
+
+                    <span class="solution-label">
+                        LOCAL
+                    </span>
+
+                    <h3>
+                        Monitoreo para establecimientos
+                    </h3>
+
+                    <p>
+                        Apoya la supervisión de establecimientos
+                        mediante el análisis de imágenes y la
+                        identificación de eventos configurados.
+                    </p>
+
+                    <div class="solution-feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Supervisión de video
+                        </span>
+
+                    </div>
+
+                    <div class="solution-feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Registro de eventos
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EMPRESA -->
+
+            <article class="solution-card">
+
+                <div class="solution-image company-image">
+
+                    <div class="solution-overlay"></div>
+
+                    <i class="fa-solid fa-building"></i>
+
+                </div>
+
+                <div class="solution-content">
+
+                    <span class="solution-label">
+                        EMPRESA
+                    </span>
+
+                    <h3>
+                        Seguridad para organizaciones
+                    </h3>
+
+                    <p>
+                        Una solución orientada a entornos donde
+                        el análisis automatizado de video puede
+                        complementar los sistemas de vigilancia.
+                    </p>
+
+                    <div class="solution-feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Detección automatizada
+                        </span>
+
+                    </div>
+
+                    <div class="solution-feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Evidencia de eventos
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     PRODUCTOS
+===================================================== -->
+
+<section class="products-section" id="productos">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                PRODUCTOS
+            </span>
+
+            <h2>
+                Soluciones de seguridad
+                <span>inteligente.</span>
+            </h2>
+
+            <p>
+                CENTINELA-X integra diferentes componentes para
+                analizar video, detectar eventos de interés y
+                generar información que facilite su revisión.
+            </p>
+
+        </div>
+
+
+        <div class="products-grid">
+
+
+            <!-- PRODUCTO 01 -->
+
+            <article class="product-card">
+
+                <div class="product-card-top">
+
+                    <div class="product-icon">
+
+                        <i class="fa-solid fa-video"></i>
+
+                    </div>
+
+                    <span class="product-number">
+                        01
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Análisis de video
+                </h3>
+
+                <p>
+                    Procesamiento de fuentes de video para
+                    analizar los frames mediante modelos
+                    de Inteligencia Artificial.
+                </p>
+
+
+                <span class="product-status">
+                    DISPONIBLE
+                </span>
+
+            </article>
+
+
+            <!-- PRODUCTO 02 -->
+
+            <article class="product-card">
+
+                <div class="product-card-top">
+
+                    <div class="product-icon">
+
+                        <i class="fa-solid fa-crosshairs"></i>
+
+                    </div>
+
+                    <span class="product-number">
+                        02
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Detección mediante IA
+                </h3>
+
+                <p>
+                    Identificación de objetos configurados
+                    mediante modelos de detección y evaluación
+                    de su nivel de confianza.
+                </p>
+
+
+                <span class="product-status">
+                    DISPONIBLE
+                </span>
+
+            </article>
+
+
+            <!-- PRODUCTO 03 -->
+
+            <article class="product-card">
+
+                <div class="product-card-top">
+
+                    <div class="product-icon">
+
+                        <i class="fa-solid fa-file-video"></i>
+
+                    </div>
+
+                    <span class="product-number">
+                        03
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Evidencia de eventos
+                </h3>
+
+                <p>
+                    Registro y conservación de información
+                    asociada a eventos detectados durante
+                    el análisis del video.
+                </p>
+
+
+                <span class="product-status">
+                    DISPONIBLE
+                </span>
+
+            </article>
+
+
+            <!-- PRODUCTO 04 -->
+
+            <article class="product-card">
+
+                <div class="product-card-top">
+
+                    <div class="product-icon">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                    </div>
+
+                    <span class="product-number">
+                        04
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Sistema de alertas
+                </h3>
+
+                <p>
+                    Generación de alertas asociadas a eventos
+                    que cumplen con los criterios configurados
+                    por el sistema.
+                </p>
+
+
+                <span class="product-status">
+                    EN DESARROLLO
+                </span>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     SERVICIOS
+===================================================== -->
+
+<section class="services-section" id="servicios">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                SERVICIOS
+            </span>
+
+            <h2>
+                Tecnología aplicada a la
+                <span>seguridad.</span>
+            </h2>
+
+            <p>
+                CENTINELA-X busca facilitar el análisis de video
+                mediante herramientas de Inteligencia Artificial,
+                adaptándose a diferentes necesidades de seguridad.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <!-- SERVICIO 01 -->
+
+            <article class="service-card">
+
+                <div class="service-top">
+
+                    <div class="service-icon">
+
+                        <i class="fa-solid fa-video"></i>
+
+                    </div>
+
+                    <span class="service-number">
+                        01
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Análisis de video
+                </h3>
+
+                <p>
+                    Procesamiento de fuentes de video mediante
+                    modelos de Inteligencia Artificial para
+                    identificar elementos de interés.
+                </p>
+
+
+                <div class="service-status">
+
+                    <span class="status-dot"></span>
+
+                    DISPONIBLE
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICIO 02 -->
+
+            <article class="service-card">
+
+                <div class="service-top">
+
+                    <div class="service-icon">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                    <span class="service-number">
+                        02
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Detección y seguimiento
+                </h3>
+
+                <p>
+                    Identificación y seguimiento de objetos
+                    detectados a través de diferentes frames
+                    del video.
+                </p>
+
+
+                <div class="service-status">
+
+                    <span class="status-dot"></span>
+
+                    DISPONIBLE
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICIO 03 -->
+
+            <article class="service-card">
+
+                <div class="service-top">
+
+                    <div class="service-icon">
+
+                        <i class="fa-solid fa-file-shield"></i>
+
+                    </div>
+
+                    <span class="service-number">
+                        03
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Registro de evidencia
+                </h3>
+
+                <p>
+                    Conservación de información asociada a
+                    eventos detectados para facilitar su
+                    posterior revisión.
+                </p>
+
+
+                <div class="service-status">
+
+                    <span class="status-dot"></span>
+
+                    DISPONIBLE
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICIO 04 -->
+
+            <article class="service-card">
+
+                <div class="service-top">
+
+                    <div class="service-icon">
+
+                        <i class="fa-solid fa-gears"></i>
+
+                    </div>
+
+                    <span class="service-number">
+                        04
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Evolución de la plataforma
+                </h3>
+
+                <p>
+                    Desarrollo progresivo de nuevas capacidades
+                    para ampliar el análisis inteligente y las
+                    posibilidades de detección.
+                </p>
+
+
+                <div class="service-status development">
+
+                    <span class="status-dot"></span>
+
+                    EN EVOLUCIÓN
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- MENSAJE -->
+
+        <div class="services-note">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <p>
+                Las capacidades de CENTINELA-X continúan en
+                desarrollo y se ampliarán progresivamente
+                conforme evolucione el proyecto.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     RECURSOS
+===================================================== -->
+
+<section class="resources-section" id="recursos">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                RECURSOS
+            </span>
+
+            <h2>
+                Conoce más sobre
+                <span>CENTINELA-X.</span>
+            </h2>
+
+            <p>
+                Información y recursos para comprender el
+                funcionamiento, la tecnología y la evolución
+                del proyecto.
+            </p>
+
+        </div>
+
+
+        <div class="resources-grid">
+
+
+            <!-- RECURSO 01 -->
+
+            <article class="resource-card">
+
+                <div class="resource-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <span class="resource-number">
+                    01
+                </span>
+
+                <div class="resource-content">
+
+                    <span class="resource-label">
+                        PROYECTO
+                    </span>
+
+                    <h3>
+                        Conoce CENTINELA-X
+                    </h3>
+
+                    <p>
+                        Descubre el propósito del proyecto,
+                        el problema que busca abordar y su
+                        enfoque basado en Inteligencia Artificial.
+                    </p>
+
+                    <a href="#conocenos" class="resource-link">
+
+                        Explorar
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- RECURSO 02 -->
+
+            <article class="resource-card">
+
+                <div class="resource-icon">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                </div>
+
+                <span class="resource-number">
+                    02
+                </span>
+
+                <div class="resource-content">
+
+                    <span class="resource-label">
+                        TECNOLOGÍA
+                    </span>
+
+                    <h3>
+                        Stack tecnológico
+                    </h3>
+
+                    <p>
+                        Conoce las tecnologías utilizadas actualmente
+                        para el procesamiento de video y la detección
+                        mediante Inteligencia Artificial.
+                    </p>
+
+                    <a href="#tecnologia" class="resource-link">
+
+                        Ver tecnología
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- RECURSO 03 -->
+
+            <article class="resource-card">
+
+                <div class="resource-icon">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                </div>
+
+                <span class="resource-number">
+                    03
+                </span>
+
+                <div class="resource-content">
+
+                    <span class="resource-label">
+                        FUNCIONAMIENTO
+                    </span>
+
+                    <h3>
+                        Flujo del sistema
+                    </h3>
+
+                    <p>
+                        Consulta de forma visual las principales
+                        etapas que intervienen en el análisis
+                        inteligente del video.
+                    </p>
+
+                    <a href="#como-funciona" class="resource-link">
+
+                        Ver proceso
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- RECURSO 04 -->
+
+            <article class="resource-card">
+
+                <div class="resource-icon">
+
+                    <i class="fa-solid fa-code-branch"></i>
+
+                </div>
+
+                <span class="resource-number">
+                    04
+                </span>
+
+                <div class="resource-content">
+
+                    <span class="resource-label">
+                        EVOLUCIÓN
+                    </span>
+
+                    <h3>
+                        Roadmap
+                    </h3>
+
+                    <p>
+                        Conoce las capacidades actuales, las que
+                        se encuentran en desarrollo y las funciones
+                        planeadas para futuras etapas.
+                    </p>
+
+                    <a href="#proximamente" class="resource-link">
+
+                        Ver evolución
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     COMO FUNCIONA
+===================================================== -->
+
+<section class="process-section" id="como-funciona">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                TECNOLOGÍA CENTINELA-X
+            </span>
+
+            <h2>
+                ¿Cómo funciona <span>CENTINELA-X</span>?
+            </h2>
+
+            <p>
+                El sistema procesa una fuente de video y utiliza
+                modelos de Inteligencia Artificial para analizar
+                las imágenes, identificar objetos y registrar
+                eventos de interés.
+            </p>
+
+        </div>
+
+
+        <div class="process-flow">
+
+
+            <!-- PASO 01 -->
+
+            <div class="process-step">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <div class="process-icon">
+
+                    <i class="fa-solid fa-video"></i>
+
+                </div>
+
+                <h3>
+                    Fuente de video
+                </h3>
+
+                <p>
+                    El sistema recibe una fuente de video
+                    para iniciar el proceso de análisis.
+                </p>
+
+            </div>
+
+
+            <!-- CONECTOR -->
+
+            <div class="process-connector">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+            <!-- PASO 02 -->
+
+            <div class="process-step">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <div class="process-icon">
+
+                    <i class="fa-solid fa-gears"></i>
+
+                </div>
+
+                <h3>
+                    Procesamiento
+                </h3>
+
+                <p>
+                    Los frames del video son procesados
+                    para que puedan ser analizados por
+                    los modelos de IA.
+                </p>
+
+            </div>
+
+
+            <!-- CONECTOR -->
+
+            <div class="process-connector">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+            <!-- PASO 03 -->
+
+            <div class="process-step">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <div class="process-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <h3>
+                    Inteligencia Artificial
+                </h3>
+
+                <p>
+                    Los modelos de detección analizan
+                    las imágenes para identificar los
+                    elementos configurados.
+                </p>
+
+            </div>
+
+
+            <!-- CONECTOR -->
+
+            <div class="process-connector">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+            <!-- PASO 04 -->
+
+            <div class="process-step">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <div class="process-icon">
+
+                    <i class="fa-solid fa-crosshairs"></i>
+
+                </div>
+
+                <h3>
+                    Detección
+                </h3>
+
+                <p>
+                    El sistema identifica las detecciones
+                    y considera el nivel de confianza
+                    obtenido por el modelo.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- RESULTADO -->
+
+        <div class="process-result">
+
+            <div class="result-icon">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+            <div class="result-content">
+
+                <span>
+                    RESULTADO
+                </span>
+
+                <h3>
+                    Registro de eventos y evidencia
+                </h3>
+
+                <p>
+                    Las detecciones relevantes pueden asociarse
+                    con un evento para conservar evidencia y
+                    generar una alerta dentro del flujo definido
+                    por el sistema.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     TECNOLOGIA
+===================================================== -->
+
+<section class="technology-section" id="tecnologia">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                TECNOLOGÍA
+            </span>
+
+            <h2>
+                Inteligencia detrás de
+                <span>CENTINELA-X</span>
+            </h2>
+
+            <p>
+                CENTINELA-X integra diferentes tecnologías para
+                procesar video, analizar imágenes y realizar
+                detecciones mediante Inteligencia Artificial.
+            </p>
+
+        </div>
+
+
+        <div class="technology-grid">
+
+
+            <!-- YOLO -->
+
+            <article class="technology-card featured">
+
+                <div class="technology-icon">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </div>
+
+                <div class="technology-content">
+
+                    <span class="technology-number">
+                        01
+                    </span>
+
+                    <h3>
+                        YOLO
+                    </h3>
+
+                    <span class="technology-type">
+                        DETECCIÓN DE OBJETOS
+                    </span>
+
+                    <p>
+                        Modelo de visión computacional utilizado
+                        para detectar objetos dentro de los frames
+                        del video y obtener información sobre las
+                        detecciones realizadas.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PYTHON -->
+
+            <article class="technology-card">
+
+                <div class="technology-icon">
+
+                    <i class="fa-brands fa-python"></i>
+
+                </div>
+
+                <div class="technology-content">
+
+                    <span class="technology-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <span class="technology-type">
+                        PROCESAMIENTO
+                    </span>
+
+                    <p>
+                        Lenguaje utilizado para integrar el
+                        procesamiento de video, los modelos de
+                        Inteligencia Artificial y la lógica
+                        principal del sistema.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- OPENCV -->
+
+            <article class="technology-card">
+
+                <div class="technology-icon">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                </div>
+
+                <div class="technology-content">
+
+                    <span class="technology-number">
+                        03
+                    </span>
+
+                    <h3>
+                        OpenCV
+                    </h3>
+
+                    <span class="technology-type">
+                        VIDEO E IMÁGENES
+                    </span>
+
+                    <p>
+                        Biblioteca utilizada para trabajar con
+                        fuentes de video, frames e imágenes durante
+                        el proceso de análisis.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- DEEPSORT -->
+
+            <article class="technology-card">
+
+                <div class="technology-icon">
+
+                    <i class="fa-solid fa-route"></i>
+
+                </div>
+
+                <div class="technology-content">
+
+                    <span class="technology-number">
+                        04
+                    </span>
+
+                    <h3>
+                        DeepSORT
+                    </h3>
+
+                    <span class="technology-type">
+                        SEGUIMIENTO
+                    </span>
+
+                    <p>
+                        Tecnología utilizada para realizar el
+                        seguimiento de objetos detectados a través
+                        de diferentes frames del video.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- POSE ESTIMATION -->
+
+            <article class="technology-card">
+
+                <div class="technology-icon">
+
+                    <i class="fa-solid fa-person-running"></i>
+
+                </div>
+
+                <div class="technology-content">
+
+                    <span class="technology-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Pose Estimation
+                    </h3>
+
+                    <span class="technology-type">
+                        ANÁLISIS DE MOVIMIENTO
+                    </span>
+
+                    <p>
+                        Tecnología orientada al análisis de la
+                        posición corporal para complementar la
+                        interpretación de movimientos y comportamientos.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- STACK -->
+
+        <div class="technology-stack">
+
+            <div class="stack-title">
+
+                <span>
+                    STACK ACTUAL
+                </span>
+
+                <div class="stack-line"></div>
+
+            </div>
+
+
+            <div class="stack-items">
+
+                <span>Python</span>
+
+                <span>YOLO</span>
+
+                <span>OpenCV</span>
+
+                <span>DeepSORT</span>
+
+                <span>Pose Estimation</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ROADMAP / PROXIMAMENTE
+===================================================== -->
+
+<section class="roadmap-section" id="proximamente">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                EVOLUCIÓN DEL PROYECTO
+            </span>
+
+            <h2>
+                CENTINELA-X
+                <span>continúa evolucionando</span>
+            </h2>
+
+            <p>
+                La plataforma se encuentra en constante desarrollo.
+                Nuevas capacidades serán incorporadas progresivamente
+                para ampliar las posibilidades del análisis inteligente
+                de video y la prevención de riesgos.
+            </p>
+
+        </div>
+
+
+        <div class="roadmap">
+
+
+            <!-- ==========================================
+                 ACTUAL
+            =========================================== -->
+
+            <div class="roadmap-column current">
+
+                <div class="roadmap-header">
+
+                    <div class="roadmap-status">
+
+                        <span class="status-dot"></span>
+
+                        ACTUAL
+
+                    </div>
+
+                    <span class="roadmap-number">
+                        01
+                    </span>
+
+                </div>
+
+
+                <div class="roadmap-line"></div>
+
+
+                <div class="roadmap-items">
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-video"></i>
+
+                        <span>
+                            Análisis de video
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-crosshairs"></i>
+
+                        <span>
+                            Detección mediante IA
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-route"></i>
+
+                        <span>
+                            Seguimiento de objetos
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-file-shield"></i>
+
+                        <span>
+                            Registro y evidencia
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 EN DESARROLLO
+            =========================================== -->
+
+            <div class="roadmap-column development">
+
+                <div class="roadmap-header">
+
+                    <div class="roadmap-status">
+
+                        <span class="status-dot"></span>
+
+                        EN DESARROLLO
+
+                    </div>
+
+                    <span class="roadmap-number">
+                        02
+                    </span>
+
+                </div>
+
+
+                <div class="roadmap-line"></div>
+
+
+                <div class="roadmap-items">
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>
+                            Análisis avanzado de comportamiento
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span>
+                            Mejoras en el sistema de alertas
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                        <span>
+                            Nuevos modelos de IA
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-gauge-high"></i>
+
+                        <span>
+                            Optimización del procesamiento
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 PROXIMAMENTE
+            =========================================== -->
+
+            <div class="roadmap-column future">
+
+                <div class="roadmap-header">
+
+                    <div class="roadmap-status">
+
+                        <span class="status-dot"></span>
+
+                        PRÓXIMAMENTE
+
+                    </div>
+
+                    <span class="roadmap-number">
+                        03
+                    </span>
+
+                </div>
+
+
+                <div class="roadmap-line"></div>
+
+
+                <div class="roadmap-items">
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                        <span>
+                            Reconocimiento facial
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            Monitoreo continuo 24/7
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Análisis predictivo para prevención de riesgos
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-item">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>
+                            Nuevas capacidades de detección
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- MENSAJE FINAL -->
+
+        <div class="roadmap-footer">
+
+            <i class="fa-solid fa-code-branch"></i>
+
+            <p>
+                Las funcionalidades futuras forman parte de la
+                evolución planificada de CENTINELA-X y estarán
+                disponibles conforme avance su desarrollo.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     EVIDENCIA Y SEGURIDAD
+===================================================== -->
+
+<section class="evidence-section" id="evidencia">
+
+    <div class="section-container">
+
+        <div class="evidence-layout">
+
+
+            <!-- ==========================================
+                 CONTENIDO PRINCIPAL
+            =========================================== -->
+
+            <div class="evidence-content">
+
+                <span class="section-tag">
+                    EVIDENCIA Y SEGURIDAD
+                </span>
+
+                <h2>
+                    Detectar es solo el
+                    <span>primer paso.</span>
+                </h2>
+
+                <p class="evidence-intro">
+                    CENTINELA-X busca transformar las detecciones
+                    realizadas sobre el video en información útil
+                    para el seguimiento de eventos de interés.
+                </p>
+
+
+                <div class="evidence-points">
+
+
+                    <div class="evidence-point">
+
+                        <div class="evidence-point-icon">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Identificación
+                            </h3>
+
+                            <p>
+                                El sistema analiza el contenido del
+                                video y registra las detecciones
+                                realizadas por los modelos.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evidence-point">
+
+                        <div class="evidence-point-icon">
+
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Evento de interés
+                            </h3>
+
+                            <p>
+                                Las detecciones relevantes pueden
+                                asociarse con un evento que requiera
+                                atención.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evidence-point">
+
+                        <div class="evidence-point-icon">
+
+                            <i class="fa-solid fa-folder-open"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Conservación
+                            </h3>
+
+                            <p>
+                                La información y evidencia asociada
+                                al evento puede conservarse para su
+                                posterior consulta.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 PANEL VISUAL
+            =========================================== -->
+
+            <div class="evidence-panel">
+
+
+                <div class="panel-header">
+
+                    <div class="panel-status">
+
+                        <span></span>
+
+                        EVENTO DETECTADO
+
+                    </div>
+
+                    <span class="panel-time">
+                        00:24:18
+                    </span>
+
+                </div>
+
+
+                <div class="detection-preview">
+
+                    <div class="preview-grid"></div>
+
+                    <div class="detection-box box-one">
+
+                        <span>
+                            PERSON
+                        </span>
+
+                    </div>
+
+                    <div class="detection-box box-two">
+
+                        <span>
+                            OBJECT
+                        </span>
+
+                    </div>
+
+
+                    <div class="scan-line"></div>
+
+                </div>
+
+
+                <div class="panel-data">
+
+                    <div class="data-item">
+
+                        <span>
+                            DETECCIONES
+                        </span>
+
+                        <strong>
+                            02
+                        </strong>
+
+                    </div>
+
+
+                    <div class="data-item">
+
+                        <span>
+                            CONFIANZA
+                        </span>
+
+                        <strong>
+                            94%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="data-item">
+
+                        <span>
+                            ESTADO
+                        </span>
+
+                        <strong class="data-alert">
+                            ALERTA
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="evidence-file">
+
+                    <i class="fa-solid fa-file-video"></i>
+
+                    <div>
+
+                        <strong>
+                            evidencia_evento.mp4
+                        </strong>
+
+                        <span>
+                            Registro asociado al evento
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-lock"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     POR QUE CENTINELA-X
+===================================================== -->
+
+<section class="benefits-section" id="beneficios">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                EL VALOR DE CENTINELA-X
+            </span>
+
+            <h2>
+                Seguridad más
+                <span>inteligente</span>
+            </h2>
+
+            <p>
+                CENTINELA-X combina análisis de video e Inteligencia
+                Artificial para aportar una nueva perspectiva al
+                monitoreo de espacios y al registro de eventos.
+            </p>
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+
+            <!-- BENEFICIO 01 -->
+
+            <article class="benefit-card">
+
+                <div class="benefit-top">
+
+                    <span class="benefit-number">
+                        01
+                    </span>
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Análisis automatizado
+                </h3>
+
+                <p>
+                    La Inteligencia Artificial permite analizar
+                    información visual de manera automatizada,
+                    reduciendo la dependencia de una revisión
+                    completamente manual.
+                </p>
+
+            </article>
+
+
+            <!-- BENEFICIO 02 -->
+
+            <article class="benefit-card">
+
+                <div class="benefit-top">
+
+                    <span class="benefit-number">
+                        02
+                    </span>
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-crosshairs"></i>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Detección basada en IA
+                </h3>
+
+                <p>
+                    Los modelos de visión computacional permiten
+                    identificar objetos configurados y proporcionar
+                    información asociada a cada detección.
+                </p>
+
+            </article>
+
+
+            <!-- BENEFICIO 03 -->
+
+            <article class="benefit-card">
+
+                <div class="benefit-top">
+
+                    <span class="benefit-number">
+                        03
+                    </span>
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Información para revisión
+                </h3>
+
+                <p>
+                    El registro de eventos y la conservación de
+                    evidencia permiten disponer de información
+                    para su consulta posterior.
+                </p>
+
+            </article>
+
+
+            <!-- BENEFICIO 04 -->
+
+            <article class="benefit-card">
+
+                <div class="benefit-top">
+
+                    <span class="benefit-number">
+                        04
+                    </span>
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Tecnología escalable
+                </h3>
+
+                <p>
+                    La arquitectura del proyecto está pensada para
+                    evolucionar e incorporar nuevas capacidades de
+                    análisis conforme avance su desarrollo.
+                </p>
+
+            </article>
+
+
+            <!-- BENEFICIO 05 -->
+
+            <article class="benefit-card">
+
+                <div class="benefit-top">
+
+                    <span class="benefit-number">
+                        05
+                    </span>
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Enfoque en seguridad
+                </h3>
+
+                <p>
+                    El proyecto está orientado a fortalecer el
+                    monitoreo mediante herramientas de Inteligencia
+                    Artificial aplicadas a la seguridad.
+                </p>
+
+            </article>
+
+
+            <!-- BENEFICIO 06 -->
+
+            <article class="benefit-card">
+
+                <div class="benefit-top">
+
+                    <span class="benefit-number">
+                        06
+                    </span>
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Evolución continua
+                </h3>
+
+                <p>
+                    CENTINELA-X cuenta con una hoja de evolución
+                    orientada a ampliar sus capacidades de detección,
+                    análisis y prevención.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- FRASE FINAL -->
+
+        <div class="benefits-highlight">
+
+            <div class="highlight-line"></div>
+
+            <p>
+                <strong>
+                    CENTINELA-X
+                </strong>
+
+                transforma el análisis de video en información
+                que puede ayudar a comprender y responder ante
+                eventos de interés.
+            </p>
+
+            <div class="highlight-line"></div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     CONTACTO / CTA
+===================================================== -->
+
+<section class="cta-section" id="contacto">
+
+    <div class="cta-container">
+
+        <div class="cta-decoration cta-decoration-one"></div>
+
+        <div class="cta-decoration cta-decoration-two"></div>
+
+
+        <div class="cta-content">
+
+            <span class="section-tag">
+                CONECTEMOS
+            </span>
+
+            <h2>
+                La seguridad del futuro
+                <span>comienza hoy.</span>
+            </h2>
+
+            <p>
+                Conoce el proyecto CENTINELA-X y descubre cómo
+                la Inteligencia Artificial puede transformar la
+                forma en que analizamos información de video.
+            </p>
+
+
+            <div class="cta-actions">
+
+                <a href="#conocenos" class="cta-button primary">
+
+                    <span>
+                        Conocer CENTINELA-X
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="#tecnologia" class="cta-button secondary">
+
+                    <span>
+                        Ver tecnología
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="cta-status">
+
+            <span class="cta-status-dot"></span>
+
+            <span>
+                PLATAFORMA EN EVOLUCIÓN
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+
+        <!-- ==========================================
+             FOOTER MAIN
+        =========================================== -->
+
+        <div class="footer-main">
+
+
+            <!-- MARCA -->
+
+            <div class="footer-brand">
+
+                <a href="#" class="footer-logo">
+                    CENTINELA<span>-X</span>
+                </a>
+
+                <p>
+                    Seguridad inteligente mediante
+                    Inteligencia Artificial y análisis de video.
+                </p>
+
+
+                <div class="footer-status">
+
+                    <span class="footer-status-dot"></span>
+
+                    <span>
+                        PLATAFORMA EN EVOLUCIÓN
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVEGACIÓN -->
+
+            <div class="footer-column">
+
+                <h4>
+                    PROYECTO
+                </h4>
+
+                <a href="#conocenos">
+                    ¿Qué es CENTINELA-X?
+                </a>
+
+                <a href="#como-funciona">
+                    ¿Cómo funciona?
+                </a>
+
+                <a href="#evidencia">
+                    Evidencia y seguridad
+                </a>
+
+                <a href="#beneficios">
+                    ¿Por qué CENTINELA-X?
+                </a>
+
+            </div>
+
+
+            <!-- SOLUCIONES -->
+
+            <div class="footer-column">
+
+                <h4>
+                    SOLUCIONES
+                </h4>
+
+                <a href="#soluciones">
+                    Hogar
+                </a>
+
+                <a href="#soluciones">
+                    Local
+                </a>
+
+                <a href="#soluciones">
+                    Empresa
+                </a>
+
+                <a href="#proximamente">
+                    Próximamente
+                </a>
+
+            </div>
+
+
+            <!-- TECNOLOGÍA -->
+
+            <div class="footer-column">
+
+                <h4>
+                    TECNOLOGÍA
+                </h4>
+
+                <a href="#tecnologia">
+                    YOLO
+                </a>
+
+                <a href="#tecnologia">
+                    Python
+                </a>
+
+                <a href="#tecnologia">
+                    OpenCV
+                </a>
+
+                <a href="#tecnologia">
+                    DeepSORT
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ==========================================
+             FOOTER BOTTOM
+        =========================================== -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CENTINELA-X. Todos los derechos reservados.
+            </p>
+
+
+            <div class="footer-links">
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+                <a href="#proximamente">
+                    Roadmap
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
 
 </body>
 

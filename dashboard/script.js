@@ -1,50 +1,96 @@
-async function cargarEventos(){
+let ultimaAlerta = "";
 
-const res = await fetch("http://127.0.0.1:8000/eventos");
+async function cargarEventos() {
 
-const datos = await res.json();
+    try{
 
-const tabla = document.getElementById("tabla");
+        const res = await fetch("http://127.0.0.1:8000/eventos");
 
-tabla.innerHTML="";
+        const datos = await res.json();
 
-document.getElementById("total").innerHTML=datos.length;
+        const tabla = document.getElementById("tabla");
 
-document.getElementById("armas").innerHTML=datos.length;
+        tabla.innerHTML="";
 
-if(datos.length>0){
+        document.getElementById("total").innerHTML=datos.length;
 
-const ultimo=datos[0];
+        document.getElementById("armas").innerHTML=datos.length;
 
-document.getElementById("ultima").innerHTML=`
+        // Estado del sistema
+        document.getElementById("estadoIA").innerHTML="ONLINE";
 
-<h2>${ultimo.tipo}</h2>
+        if(datos.length>0){
 
-<h3>${(ultimo.confianza*100).toFixed(1)}%</h3>
+            const ultimo=datos[0];
 
-<p>${ultimo.fecha}</p>
+            // Mostrar VIDEO o WEBCAM
+            document.getElementById("fuente").innerHTML="VIDEO";
 
-`;
+            // Última alerta
+            document.getElementById("ultima").innerHTML=`
 
-}
+                <h2>${ultimo.tipo}</h2>
 
-datos.forEach(evento=>{
+                <h3>${(ultimo.confianza*100).toFixed(1)}%</h3>
 
-tabla.innerHTML+=`
+                <p>${ultimo.fecha}</p>
 
-<tr>
+            `;
 
-<td>${evento.fecha}</td>
+            // Animación cuando llega una nueva alerta
+            if(ultimaAlerta!==ultimo.fecha){
 
-<td>${evento.tipo}</td>
+                ultimaAlerta=ultimo.fecha;
 
-<td>${evento.confianza}</td>
+                document.querySelector(".panel").classList.add("flash");
 
-</tr>
+                setTimeout(()=>{
 
-`;
+                    document.querySelector(".panel").classList.remove("flash");
 
-});
+                },1200);
+
+            }
+
+        }
+
+        datos.forEach(evento=>{
+
+            tabla.innerHTML+=`
+
+                <tr>
+
+                    <td>${evento.fecha}</td>
+
+                    <td>
+
+                        <span class="badge">
+
+                            ${evento.tipo}
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        ${(evento.confianza*100).toFixed(1)}%
+
+                    </td>
+
+                </tr>
+
+            `;
+
+        });
+
+    }
+
+    catch(error){
+
+        console.log(error);
+
+    }
 
 }
 
