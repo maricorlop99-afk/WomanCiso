@@ -2,99 +2,409 @@
 <html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENTINELA-X | Dashboard</title>
 
-<meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/dashboard/img/CentinelaLogo.png">
 
-<title>CENTINELA-X</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <link rel="stylesheet" href="/dashboard/css/dashboard.css">
 </head>
 
 <body>
 
-<header>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="/dashboard/img/CentinelaLogo.png" alt="CENTINELA-X">
+            <h2>CENTINELA-X</h2>
+            <span>SISTEMA INTELIGENTE DE VIGILANCIA</span>
+        </div>
 
-<h1>CENTINELA-X</h1>
+        <nav class="sidebar-nav">
+            <a href="#panel-control" class="active">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Panel de control</span>
+            </a>
+            <a href="#video-wall">
+                <i class="fa-solid fa-video"></i>
+                <span>Video Wall</span>
+            </a>
+            <a href="#grafico">
+                <i class="fa-solid fa-chart-bar"></i>
+                <span>Actividad</span>
+            </a>
+            <a href="#alertas">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Centro de alertas</span>
+            </a>
+            <a href="#centro-ia">
+                <i class="fa-solid fa-brain"></i>
+                <span>Centro de IA</span>
+            </a>
+            <a href="#salud">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>Salud del sistema</span>
+            </a>
+        </nav>
 
-<div id="estado">
+        <a href="/" class="back-to-site">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Volver al sitio</span>
+        </a>
 
-🟢 Sistema Activo
+        <div class="sidebar-status">
+            <span class="status-indicator"></span>
+            <div>
+                <strong>Sistema activo</strong>
+                <small>Todos los servicios operativos</small>
+            </div>
+        </div>
+    </aside>
 
-</div>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="dashboard-main">
 
-</header>
+        <!-- HEADER -->
+        <header class="dashboard-header">
+            <div>
+                <span class="header-tag">CENTINELA-X / MONITOREO</span>
+                <h1>Panel de control</h1>
+                <p>Monitoreo inteligente de seguridad</p>
+            </div>
+            <div class="header-right">
+                <div class="system-status">
+                    <span></span>
+                    SISTEMA ACTIVO
+                </div>
+                <div class="last-update">
+                    <i class="fa-regular fa-clock"></i>
+                    Última actualización:
+                    <strong id="last-update">--:--:--</strong>
+                </div>
+            </div>
+        </header>
 
-<div class="contenedor">
+        <!-- PANEL DE CONTROL -->
+        <section class="dashboard-section" id="panel-control">
+            <div class="section-title">
+                <div>
+                    <span>RESUMEN</span>
+                    <h2>Estado general</h2>
+                </div>
+            </div>
 
-<div class="video">
+            <div class="metrics-grid">
+                <article class="metric-card">
+                    <div class="metric-icon purple">
+                        <i class="fa-solid fa-crosshairs"></i>
+                    </div>
+                    <div class="metric-content">
+                        <span>TOTAL EVENTOS</span>
+                        <strong id="totalAlertas">00</strong>
+                        <small>Registrados</small>
+                    </div>
+                </article>
 
-<h2>Video en vivo</h2>
+                <article class="metric-card">
+                    <div class="metric-icon red">
+                        <i class="fa-solid fa-gun"></i>
+                    </div>
+                    <div class="metric-content">
+                        <span>ARMAS DETECTADAS</span>
+                        <strong id="totalArmas">00</strong>
+                        <small>Confiables</small>
+                    </div>
+                </article>
 
-<img src="http://127.0.0.1:8000/video_feed">
+                <article class="metric-card">
+                    <div class="metric-icon blue">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="metric-content">
+                        <span>ÚLTIMA ACTUALIZACIÓN</span>
+                        <strong id="ultimaActualizacion">--:--:--</strong>
+                        <small>Hora del sistema</small>
+                    </div>
+                </article>
 
-</div>
+                <article class="metric-card">
+                    <div class="metric-icon green">
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="metric-content">
+                        <span>ESTADO DEL SISTEMA</span>
+                        <strong id="estadoSistema">ACTIVO</strong>
+                        <small id="statusDetail">Conectado</small>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-<div class="panel">
+        <!-- GRÁFICO -->
+        <section class="dashboard-section" id="grafico">
+            <div class="section-title">
+                <div>
+                    <span>ACTIVIDAD</span>
+                    <h2>Alertas por día</h2>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="activityChart"></canvas>
+            </div>
+        </section>
 
-<h2>Última alerta</h2>
+        <!-- VIDEO WALL -->
+        <section class="dashboard-section" id="video-wall">
+            <div class="section-title">
+                <div>
+                    <span>VIDEOVIGILANCIA</span>
+                    <h2>Video Wall</h2>
+                </div>
+                <div class="section-badge">
+                    <span></span>
+                    CÁMARAS EN VIVO
+                </div>
+            </div>
 
-<div id="ultima">
+            <div class="video-wall-grid">
+                <!-- CÁMARA 01 - VIDEO EN VIVO (STREAMING MJPEG) -->
+                <div class="camera-card">
+                    <div class="camera-header">
+                        <span>CAM-01 · EN VIVO</span>
+                        <span class="camera-online">ONLINE</span>
+                    </div>
+                    <div class="camera-placeholder"
+                        style="padding:0; background:#000; min-height:210px; display:flex; align-items:center; justify-content:center;">
+                        <img id="videoFrame" src="/video_feed" alt="Video feed"
+                            style="width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                </div>
 
-Esperando eventos...
+                <!-- CÁMARA 02 -->
+                <div class="camera-card">
+                    <div class="camera-header">
+                        <span>CAM-02</span>
+                        <span class="camera-offline">OFFLINE</span>
+                    </div>
+                    <div class="camera-placeholder">
+                        <i class="fa-solid fa-video-slash"></i>
+                        <span>SIN SEÑAL</span>
+                    </div>
+                </div>
 
-</div>
+                <!-- CÁMARA 03 -->
+                <div class="camera-card">
+                    <div class="camera-header">
+                        <span>CAM-03</span>
+                        <span class="camera-online">ONLINE</span>
+                    </div>
+                    <div class="camera-placeholder">
+                        <i class="fa-solid fa-video"></i>
+                        <span>ESPACIO PARA CÁMARA</span>
+                    </div>
+                </div>
 
-</div>
+                <!-- CÁMARA 04 -->
+                <div class="camera-card">
+                    <div class="camera-header">
+                        <span>CAM-04</span>
+                        <span class="camera-offline">OFFLINE</span>
+                    </div>
+                    <div class="camera-placeholder">
+                        <i class="fa-solid fa-video-slash"></i>
+                        <span>SIN SEÑAL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</div>
+        <!-- CENTRO DE ALERTAS -->
+        <section class="dashboard-section" id="alertas">
+            <div class="section-title">
+                <div>
+                    <span>SEGURIDAD</span>
+                    <h2>Centro de alertas</h2>
+                </div>
+            </div>
 
-<div class="cards">
+            <div class="alerts-layout">
+                <!-- ÚLTIMA ALERTA -->
+                <div class="latest-alert">
+                    <div class="alert-header">
+                        <span>ÚLTIMA ALERTA</span>
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div id="ultima-alerta">
+                        <div class="alert-empty">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h3>Sin alertas recientes</h3>
+                            <p>Las alertas generadas por el sistema aparecerán aquí.</p>
+                        </div>
+                    </div>
+                </div>
 
-<div class="card">
+                <!-- HISTORIAL -->
+                <div class="events-history">
+                    <div class="history-header">
+                        <h3>Historial de eventos</h3>
+                        <div class="historial-controls">
+                            <input type="text" id="searchInput" placeholder="Buscar por tipo...">
+                            <span id="registrosMostrados">0 registros</span>
+                        </div>
+                    </div>
+                    <div class="event-list" id="event-list">
+                        <div class="empty-event">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>No hay eventos registrados.</span>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <button id="prevPage" disabled><i class="fa-solid fa-chevron-left"></i> Anterior</button>
+                        <span id="pageInfo">Página 1 de 1</span>
+                        <button id="nextPage">Siguiente <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<h3>Total Alertas</h3>
+        <!-- CENTRO DE IA -->
+        <section class="dashboard-section" id="centro-ia">
+            <div class="section-title">
+                <div>
+                    <span>INTELIGENCIA ARTIFICIAL</span>
+                    <h2>Centro de IA</h2>
+                </div>
+            </div>
 
-<h1 id="total">0</h1>
+            <div class="ai-grid">
+                <article class="ai-card active">
+                    <div class="ai-card-header">
+                        <div class="ai-icon"><i class="fa-solid fa-eye"></i></div>
+                        <span class="ai-status active">ACTIVO</span>
+                    </div>
+                    <h3>YOLOv8n</h3>
+                    <span class="ai-type">DETECCIÓN DE OBJETOS</span>
+                    <div class="ai-data">
+                        <div><span>VERSIÓN</span><strong>v8n</strong></div>
+                        <div><span>FPS</span><strong id="yolo-fps">--</strong></div>
+                        <div><span>GPU</span><strong id="yolo-gpu">--</strong></div>
+                    </div>
+                </article>
 
-</div>
+                <article class="ai-card">
+                    <div class="ai-card-header">
+                        <div class="ai-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <span class="ai-status future">PRÓXIMAMENTE</span>
+                    </div>
+                    <h3>RT-DETR</h3>
+                    <span class="ai-type">DETECCIÓN DE OBJETOS</span>
+                    <div class="ai-data">
+                        <div><span>VERSIÓN</span><strong>--</strong></div>
+                        <div><span>FPS</span><strong>--</strong></div>
+                        <div><span>GPU</span><strong>--</strong></div>
+                    </div>
+                </article>
 
-<div class="card">
+                <article class="ai-card">
+                    <div class="ai-card-header">
+                        <div class="ai-icon"><i class="fa-solid fa-route"></i></div>
+                        <span class="ai-status future">PRÓXIMAMENTE</span>
+                    </div>
+                    <h3>DeepSORT</h3>
+                    <span class="ai-type">SEGUIMIENTO</span>
+                    <div class="ai-data">
+                        <div><span>VERSIÓN</span><strong>--</strong></div>
+                        <div><span>FPS</span><strong>--</strong></div>
+                        <div><span>GPU</span><strong>--</strong></div>
+                    </div>
+                </article>
 
-<h3>Armas Detectadas</h3>
+                <article class="ai-card">
+                    <div class="ai-card-header">
+                        <div class="ai-icon"><i class="fa-solid fa-car"></i></div>
+                        <span class="ai-status future">PRÓXIMAMENTE</span>
+                    </div>
+                    <h3>LPR</h3>
+                    <span class="ai-type">RECONOCIMIENTO DE MATRÍCULAS</span>
+                    <div class="ai-data">
+                        <div><span>VERSIÓN</span><strong>--</strong></div>
+                        <div><span>FPS</span><strong>--</strong></div>
+                        <div><span>GPU</span><strong>--</strong></div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-<h1 id="armas">0</h1>
+        <!-- SALUD DEL SISTEMA -->
+        <section class="dashboard-section" id="salud">
+            <div class="section-title">
+                <div>
+                    <span>INFRAESTRUCTURA</span>
+                    <h2>Salud del sistema</h2>
+                </div>
+            </div>
 
-</div>
+            <div class="health-grid">
+                <div class="health-card">
+                    <span class="health-led online" id="health-ia"></span>
+                    <i class="fa-solid fa-brain"></i>
+                    <div><strong>Motor IA</strong><span>OPERATIVO</span></div>
+                </div>
+                <div class="health-card">
+                    <span class="health-led online" id="health-camera"></span>
+                    <i class="fa-solid fa-video"></i>
+                    <div><strong>Cámara</strong><span>OPERATIVO</span></div>
+                </div>
+                <div class="health-card">
+                    <span class="health-led online" id="health-api"></span>
+                    <i class="fa-solid fa-server"></i>
+                    <div><strong>API</strong><span>OPERATIVO</span></div>
+                </div>
+                <div class="health-card">
+                    <span class="health-led online" id="health-db"></span>
+                    <i class="fa-solid fa-database"></i>
+                    <div><strong>Base de datos</strong><span>OPERATIVO</span></div>
+                </div>
+                <div class="health-card">
+                    <span class="health-led online" id="health-telegram"></span>
+                    <i class="fa-brands fa-telegram"></i>
+                    <div><strong>Telegram</strong><span>OPERATIVO</span></div>
+                </div>
+            </div>
+        </section>
 
-</div>
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            <span>CENTINELA-X</span>
+            <span>Sistema inteligente de vigilancia</span>
+            <span>© 2026</span>
+        </footer>
 
-<h2>Historial</h2>
+    </main>
 
-<table>
+    <!-- MODAL DE EVIDENCIA -->
+    <div id="modal-evidencia" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modal-img" src="" alt="Evidencia" style="max-width:100%; max-height:70vh;">
+            <div id="modal-info" style="margin-top:1rem; font-family:var(--font-mono); color:var(--text);">
+                <p><strong>Tipo:</strong> <span id="modal-tipo"></span></p>
+                <p><strong>Confianza:</strong> <span id="modal-confianza"></span>%</p>
+                <p><strong>Fecha:</strong> <span id="modal-fecha"></span></p>
+            </div>
+        </div>
+    </div>
 
-<thead>
-
-<tr>
-
-<th>Fecha</th>
-
-<th>Objeto</th>
-
-<th>Confianza</th>
-
-</tr>
-
-</thead>
-
-<tbody id="tabla">
-
-</tbody>
-
-</table>
-
-<script src="script.js"></script>
-
+    <script src="/dashboard/js/dashboard.js"></script>
 </body>
 
 </html>
